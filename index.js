@@ -66,16 +66,32 @@ function list(title1) {
 
   btn.addEventListener("click", (evt) => {
     evt.preventDefault();
-
-    let desc = newInput.value;
-    let p = document.createElement("p");
-    p.innerHTML = desc;
-    description.appendChild(p);
-    p.classList.add("toDoDesc");
-    newInput.value = "";
-    p.addEventListener("click", (evt) => {
-      evt.preventDefault();
-      p.classList.add("changeDone");
-    });
+    if (
+      newInput.value == String() ||
+      newInput.value == Object() ||
+      newInput.value == " " ||
+      newInput.value == "  " ||
+      newInput.value == "   " ||
+      newInput.value == "    " ||
+      newInput.value == "     " ||
+      newInput.value == "      " ||
+      newInput.value == "       " ||
+      newInput.value == "        " ||
+      newInput.value == "         " ||
+      newInput.value == "          " ||
+      newInput.value == "           "
+    ) {
+    } else {
+      let desc = newInput.value;
+      let p = document.createElement("p");
+      p.innerHTML = desc;
+      description.appendChild(p);
+      p.classList.add("toDoDesc");
+      newInput.value = "";
+      p.addEventListener("click", (evt) => {
+        evt.preventDefault();
+        p.classList.add("changeDone");
+      });
+    }
   });
 }
