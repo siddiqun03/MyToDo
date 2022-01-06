@@ -9,7 +9,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   background: #cfd1e1;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .container {
   max-width: 1200px;
